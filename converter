@@ -1,0 +1,4 @@
+for i  in $(ls ./music/)
+do
+    ffmpeg -i ./music/$i -vn -ab 128k -ar 44100 -y ./output/$i
+done;

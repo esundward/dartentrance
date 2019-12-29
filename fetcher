@@ -1,0 +1,7 @@
+i=0
+for u in $(cat liste)
+do
+youtube-dl --extract-audio -o $i.mp3 --audio-format mp3 $u 
+let i=i+1
+done
+

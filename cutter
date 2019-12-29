@@ -1,0 +1,7 @@
+i=0
+for u in $(cat begin)
+do
+ffmpeg -t 40 -ss $u  -i ./output/$i.mp3 -c:a aac -acodec copy ./final/$i.mp3
+let i=i+1
+done
+
